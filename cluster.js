@@ -10,8 +10,8 @@ for (var i = 0; i < n; i++) {
 }
 
 for (var i = 0; i < n; i++) {
-	var args = ['./http-server.js']
-	args.push('--id=' + (i + 1))
+	var args = ['./basic-server.js']
+	args.push('--id=localhost:' + (11111 + i))
 	args.push('--listen=' + (11111 + i))
 	var proc = spawn('node', args.concat(endpoints), { cwd: __dirname })
 	proc.stdout.pipe(process.stdout)
